@@ -13,22 +13,22 @@ VALUES
 ('Sale', 62530.86, 4),
 ('Developer Lead', 110233.56, 3),
 ('Sale Lead', 92530.86, 4),
-('Lawyer Lead', 136200.86, 1),
+('Lawyer Lead', 136200.86, 1),3
 ('Accountant Lead', 72500.67, 2);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)
 VALUES
-('Monte', 'Johnson', 4, NULL),
+('Monte', 'Johnson', 5, NULL),
 ('Ryan', 'McDonald', 4, 1),
 ('Scott', 'Preston', 4, 1),
 ('Anne', 'Jackson', 4, 1),
-('Robert', 'Dolan', 2, NULL),
+('Robert', 'Dolan', 6, NULL),
 ('Jackie', 'Perez', 2, 5),
 ('Eric', 'Donald', 2, 5),
 ('Joe', 'Garland', 2, 5),
-('May', 'Set', 3, NULL),
+('May', 'Set', 7, NULL),
 ('Jaden', 'Gaveston',3, 9),
 ('Ashley', 'Butler',3, 9),
-('Suzette', 'LeRoi',1, NULL),
+('Suzette', 'LeRoi',8, NULL),
 ('Sasan', 'Belle',1, 12),
 ('Edward', 'Woolf',1, 12);
