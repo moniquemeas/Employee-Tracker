@@ -34,8 +34,8 @@
   * MySQL
 
 
-  # Demo
-  [![Note-Taker-Demo](https://drive.google.com/file/d/1WJ1YII_dqBi_IHsURuO38f3v3kqcp_zx/view)](https://drive.google.com/file/d/1WJ1YII_dqBi_IHsURuO38f3v3kqcp_zx/view)
+  # Walk through video Demo
+  [![Employee-Tracker-Demo](https://drive.google.com/file/d/1WJ1YII_dqBi_IHsURuO38f3v3kqcp_zx/view)](https://drive.google.com/file/d/1WJ1YII_dqBi_IHsURuO38f3v3kqcp_zx/view)
   
  
   
