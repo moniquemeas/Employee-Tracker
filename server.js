@@ -290,7 +290,3 @@ function deleteEmployee () {
  };
 
  
-
-
-
-
