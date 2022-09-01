@@ -13,7 +13,7 @@ VALUES
 ('Sale', 62530.86, 4),
 ('Developer Lead', 110233.56, 3),
 ('Sale Lead', 92530.86, 4),
-('Lawyer Lead', 136200.86, 1),3
+('Lawyer Lead', 136200.86, 1),
 ('Accountant Lead', 72500.67, 2);
 
 INSERT INTO employee (first_name, last_name, role_id, manager_id)

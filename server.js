@@ -31,7 +31,9 @@ function viewPrompt () {
         type: 'list',
         name: 'main',
         message: 'What would you like to do?',
-        choices:[ 'View all employees','View All Roles', 'View All Departments', 'Update Employee Role', 'Add Employee', 'Add Role', 'Add Department', 'Delete Employee', 'delete role']
+        choices:[ 'View all employees','View All Roles', 'View All Departments', 'Update Employee Role', 
+                  'Add Employee', 'Add Role', 'Add Department',
+                   'Delete Employee', 'Exit']
       },
 
     ])
@@ -69,9 +71,12 @@ function viewPrompt () {
             case 'Delete Employee':
               deleteEmployee();
               break;
-            case 'delete role':
-              deleteRole()
-              break;
+            
+          //exit function
+            case 'Exit':
+              exit()
+            break;
+            
         }
     })
   };
@@ -85,7 +90,7 @@ function viewPrompt () {
                 ON e.role_id = r.id
                 LEFT JOIN departments AS d
                 ON r.department_id = d.id
-                ORDER BY e.last_name;`;
+                ORDER BY id;`;
     db.query(sql, (err, result) => {
         if(err){
             console.log(err);
@@ -136,7 +141,7 @@ function viewPrompt () {
         if(err) {
           console.log(err);
         }
-        viewDep();
+        console.log(`${params} has been added to database.`);
         viewPrompt();      
 
       })
@@ -172,7 +177,7 @@ function addRole () {
       if(err) {
         console.log(err);
       }
-      viewRole();
+      console.log(`${res.title} has been added to database.`);
       viewPrompt();      
 
     })
@@ -213,7 +218,7 @@ function addEmployee() {
         if(err) {
           console.log(err);
         }
-          viewAllEm();
+        console.log(`${res.firstName} ${res.lastName} has been added to database.`);
           viewPrompt();      
     })
   })
@@ -272,36 +277,19 @@ function deleteEmployee () {
         if(err) {
           console.log(err);
         }
-        viewAllEm();
-        
-      })
-
-    })
- };
- function deleteRole () {
-  
-  return inquirer.prompt([
-    {
-      type: 'input',
-      name: 'id',
-      message:'Please enter the role id:'
-    }
-  ])
-    .then(function(res){
-      const sql = `DELETE FROM roles WHERE id = ?`;
-      const params =[res.id];
-      db.query(sql, params, (err, result) => {
-        if(err) {
-          console.log(err);
-        }
-        viewRole();
+        console.log(`Employee with ${res.id} has been deleted from database.`);
         viewPrompt();
-        
       })
 
     })
  };
+ 
+ 
+ function exit() {
+  console.log('=================Thank You==================')
+ };
 
+ 
 
 
 
